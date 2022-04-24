@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Muhammad Syahrial Marasobu F52120054</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+<body>
+    <main>
+      <section>
+        <div class="sidebar">
+          <ul>
+            <li><a href="index.html">Login</a></li>
+            <li><a href="registrasi.html">Registrasi</a></li>
+            <li><a href="data.html">Jumlah Akun Login</a></li>
+          </ul>
+          </div>
+              <div class="wrapper">
+                <div class="titleP">
+                  <h2>Yang Telah Login</h2>
+                </div>
+                  <br>
+                <div class="field">
+                  <table id="keywords" cellspacing="0" cellpadding="0">
+                    <thead>
+                      <tr>
+                        <th><span>Nama Panjang</span></th>
+                        <th><span>Email</span></th>
+                        <th><span>Password</span></th>
+                      </tr>
+                    </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>Muhammad Syahrial Marasobu</td>
+                          <td>Syahrialm14@gmail.com</td>
+                          <td>syahrial</td>
+                          <td><button class="danger" onclick="showAlert()">Hapus</button><br><button onclick="Alert()" class="update">Edit</button></td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>Jumaidil arham</td>
+                          <td>jarham145@gmail.com</td>
+                          <td>arham13</td>
+                          <td><button class="danger" onclick="showAlert()">Hapus</button><br><button onclick="Alert()" class="update">Edit</button></td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>       
+      </section>
+    </main>
+</body>
+<script src="js/sweetalert2.all.min.js"></script>
+<script>
+  function showAlert()
+  {
+      swal.fire({
+      title: "Apakah anda ingin menghapus data?",
+      text: "Data yang di hapus tidak akan kembali!",
+      icon: "Warning",
+      buttons: true,
+      dangerMode: true,
+      })
+      .then((willDelete) => {
+      if (willDelete) {
+          swal("Data berhasil dihapus!", {
+          icon: "success",
+          });
+      } else {
+          swal("Data tidak dihapus!");
+      }
+      });
+  }
+  function Alert()
+  {
+      swal.fire(
+  
+      "Apakah anda ingin mengedit data?",
+      {
+      icon: "warning",
+      buttons: {
+          cancel: "Tidak",
+          catch: {
+          text: "Berhasil",
+          },
+          gagal: {
+          text: "Gagal",
+          dangerMode : true,
+          },
+          
+      },
+      })
+      .then((value) => {
+      switch (value) {
+      
+          case "gagal":
+          swal("Gagal!", "Data gagal diedit", "error");
+          break;
+      
+          case "catch":
+          swal("Berhasil!", "Data berhasil diedit!", "success");
+          break;
+      
+          default:
+          swal("Data tidak diedit!");
+      }
+      });
+  }
+  </script>
+</html>

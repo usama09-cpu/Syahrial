@@ -1,0 +1,299 @@
+body
+{
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
+}
+
+main
+{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.sidebar
+{
+    position: fixed;
+    left: 0px;
+    width: 250px;
+    height: 100%;
+    background-color: rgb(200, 237, 100);
+    transition: all 0.5s ease;
+}
+
+.sidebar .top 
+{
+    font-size: 22px;
+    color: azure;
+    text-align: center;
+    line-height: 70px;
+    background-image: linear-gradient(to right, #93f36a, #b2b2b2);
+}
+
+.sidebar ul a 
+{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: #ffff;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(6, 255, 251, 0.1);
+    border-bottom:1px solid rgba(125, 134, 146, 0.302);
+    transition: all 0,5s ease;
+}
+
+ul li:hover a
+{
+    padding-left: 100px;
+    background-color: #52e0e2;
+    color: rgb(0, 0, 0);
+}
+
+section
+{
+        background-color: rgb(187, 199, 109);
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        place-items: center;
+        display: grid;
+}
+
+.wrapper 
+{
+    position: fixed;
+    left:   450px;
+    height: fit-content;
+    width: 60%;
+    background-color: azure;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 0px, 15px, 20px rgba(0,0,0,0.1);
+}
+
+.wrapper .title
+{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 100px;
+    user-select: none;
+    border-radius: 15px, 15px, 0 0;
+    background: linear-gradient(-135);
+}
+
+.wrapper form
+{
+    padding : 10px 30px 50px 30px;
+}
+
+.wrapper form .field
+{
+    height: 40px;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+
+
+
+
+.wrapper form .field input
+{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 15px;
+    padding-left: 20px;
+    border: 1px solid lightblue;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.wrapper form .field select
+{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 15px;
+    padding-left: 20px;
+    border: 1px solid lightblue;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+
+.wrapper form .field option
+{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 15px;
+    padding-left: 20px;
+    border: 1px solid lightblue;
+    border-radius: 25px;
+    transition: all 0.3s ease
+}
+
+
+button {
+    background: cornflowerblue;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-family: 'Lato';
+    margin: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+  }
+ button, .danger
+{
+    background-color: black;
+}
+button, .update
+{
+    background-color: blue;
+}
+  
+ button, .danger:hover {
+    background: red;
+  }
+  button, .update:hover {
+    background: green;
+  }
+
+
+.wrapper form .field select:focus, form .field select:valid
+{
+    border-color: red;
+}
+#keywords {
+    margin: 0 auto;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+  }
+  
+  
+  #keywords thead {
+    cursor: pointer;
+    background: #c9dff0;
+  }
+  #keywords thead tr th { 
+    font-weight: bold;
+    padding: 12px 30px;
+    padding-left: 42px;
+  }
+  #keywords thead tr th span { 
+    padding-right: 20px;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+  }
+  
+  #keywords thead tr th.headerSortUp, #keywords thead tr th.headerSortDown {
+    background: #acc8dd;
+  }
+  
+  #keywords thead tr th.headerSortUp span {
+    background-image: url('https://i.imgur.com/SP99ZPJ.png');
+  }
+  #keywords thead tr th.headerSortDown span {
+    background-image: url('https://i.imgur.com/RkA9MBo.png');
+  }
+  
+  
+  #keywords tbody tr { 
+    color: #555;
+  }
+  #keywords tbody tr td {
+    text-align: center;
+    padding: 15px 10px;
+  }
+  #keywords tbody tr td.lalign {
+    text-align: left;
+  }
+
+.wrapper form .field input:focus, form .field input:valid
+{
+    border-color: red;
+}
+
+
+
+.wrapper form .field label
+{
+    text-align-last: left  ;
+    position:absolute;
+    top: 30%;
+    left: 40px;
+    color: #999999;
+    font-weight: 200;
+    font-size: 15px;
+    pointer-events: none;
+    transform: translate(-50%);
+    transition: all 0.3s ease;
+}
+
+form .field input:focus ~label, form .field input:valid ~label
+{
+    top: 0%;
+    font-size: 16px;
+    color: red;
+    background: #ffff;
+    transform: translateY(-50%);
+}
+
+
+
+.form :content
+{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+form .content label
+{
+    color: #262626;
+    user-select: none;
+    padding-left: 5px;
+}
+
+form .content .pass-link
+{
+    color: #93f36a;
+}
+
+form .field input[type="submit"]
+{
+    color: rgb(32, 133, 221);
+    border: none;
+    padding-left: 0;
+    margin-top: -10px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    background: linear-gradient(-135deg, );
+    transition: all 0.3s ease;
+    background-color: aqua;
+}
+
